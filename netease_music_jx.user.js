@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         网易云音乐MP3链接获取器
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  在网易云音乐网页中获取音乐ID，通过解析API获取MP3链接并复制到剪贴板
 // @author       xiaohan(write by glm4.6)
 // @match        https://music.163.com/*
@@ -153,8 +153,8 @@
         const musicInfo = getMusicInfo();
         showTooltip(`正在获取《${musicInfo.title}》的MP3链接...`);
         
-
-        const apiUrl = `https://music-api.xiaohan-kaka.top/song/url?id=${musicId}&randomCNIP=true`;
+        // 解灰有点问题？
+        const apiUrl = `https://music-api.xiaohan-kaka.top/song/url/v1?id=${musicId}&level=lossless&randomCNIP=true&unblock=false`;
         
         GM_xmlhttpRequest({
             method: 'GET',
