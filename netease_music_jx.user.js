@@ -5,6 +5,8 @@
 // @description  在网易云音乐网页中获取音乐ID，通过解析API获取MP3链接并复制到剪贴板
 // @author       xiaohan(write by glm4.6)
 // @match        https://music.163.com/*
+// @downloadURL  https://github.com/Dreamkaka/netease_jx/raw/refs/heads/main/netease_music_jx.user.js
+// @updateURL    https://github.com/Dreamkaka/netease_jx/raw/refs/heads/main/netease_music_jx.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setClipboard
 // @connect      *
@@ -204,3 +206,4 @@
     // 启动脚本
     init();
 })();
+
